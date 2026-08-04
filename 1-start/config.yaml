@@ -26,11 +26,11 @@
 # - Умеет ли мяукать да / нет
 
 user:
-- admin: yes
-- name: Ivan
-- age: 25
-- position: 'DevOps Engineer'
-- skills:
+  admin: yes
+  name: Ivan
+  age: 25
+  position: 'DevOps Engineer'
+  skills:
   - name: yaml
     level: 1
     description: |
@@ -40,17 +40,16 @@ user:
     level: 3
     description: |
       experienced Docker user
-- habitation:
-  - country: Russia
-  - city: Moscow
-  - street: 'Red Square'
-  - house: 1
-  - flat: 1
-
-pets:
-  - name: Кудряшка
-    breed: Мальтипу
-    cat_mew: yes
-  - name: Луапулька
-    breed: Девон-рекс
-    cat_mew: no
+  habitation:
+    country: Russia
+    city: Moscow
+    street: 'Red Square'
+    house: 1
+    flat: 1
+  pets:
+    - name: Кудряшка
+      breed: Мальтипу
+      cat_mew: yes
+    - name: Луапулька
+      breed: Девон-рекс
+      cat_mew: no 
