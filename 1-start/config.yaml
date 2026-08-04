@@ -26,7 +26,7 @@
 # - Умеет ли мяукать да / нет
 
 user:
-  admin: yes
+  is_admin: yes
   name: Ivan
   age: 25
   position: 'DevOps Engineer'
@@ -49,7 +49,7 @@ user:
   pets:
     - name: Кудряшка
       breed: Мальтипу
-      cat_mew: yes
+      can_meow: yes
     - name: Луапулька
       breed: Девон-рекс
-      cat_mew: no 
+      can_meow: no 
