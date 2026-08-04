@@ -1,0 +1,56 @@
+# Необходимо описать в YML объекты:
+# Пользователь:
+# - Админ или нет
+# - Имя
+# - Возраст
+# - Должность
+# - Массив навыков
+# - Место жительства
+# - Массив домашних животных
+
+# Навык:
+# - Название
+# - Уроверь владение от 1 до 5
+# - Многострочное описание
+
+# Место жительство:
+# - Страна
+# - Город
+# - Улица
+# - Номер дома
+# - Номер квартиры
+
+# Домашнее животные:
+# - Название
+# - Порода
+# - Умеет ли мяукать да / нет
+
+user:
+- admin: yes
+- name: Ivan
+- age: 25
+- position: 'DevOps Engineer'
+- skills:
+  - name: yaml
+    level: 1
+    description: |
+      Can read  and write
+      simple yaml configs 
+  - name: Docker
+    level: 3
+    description: |
+      experienced Docker user
+- habitation:
+  - country: Russia
+  - city: Moscow
+  - street: 'Red Square'
+  - house: 1
+  - flat: 1
+
+pets:
+  - name: Кудряшка
+    breed: Мальтипу
+    cat_mew: yes
+  - name: Луапулька
+    breed: Девон-рекс
+    cat_mew: no
