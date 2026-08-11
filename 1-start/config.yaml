@@ -52,4 +52,4 @@ user:
       can_meow: yes
     - name: Луапулька
       breed: Девон-рекс
-      can_meow: no 
+      can_meow: no
