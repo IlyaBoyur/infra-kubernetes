@@ -8,6 +8,11 @@ spec:
     matchLabels:
       # matchLabels должен совпадать с metadata.labels  
       app: converter
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 10%
   template:
     # шаблон типа Pod, который нужно развернуть
     metadata:
