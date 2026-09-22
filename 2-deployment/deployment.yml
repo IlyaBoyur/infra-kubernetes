@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       # matchLabels должен совпадать с metadata.labels  
-      components: frontend
+      app: converter
   template:
     # шаблон типа Pod, который нужно развернуть
     metadata:
