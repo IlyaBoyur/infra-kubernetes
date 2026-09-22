@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  # name нужен для обращения через kubectl
+  name: conv-app
+  labels:
+    # labels нужен для связи с NodePort
+    app: converter
+spec:
+  containers:
+    - name: conv-app
+      image: antonlarichev/conv-app
+      ports:
+        # открытый наружу порт контейнера
+        - containerPort: 80
+      # ограничения Pod по ресурсам
+      resources:
+        limits:
+          # количсетво мегабайт
+          memory: "128Mi"
+          # 1000m - 1 процессор
+          cpu: "100m"
