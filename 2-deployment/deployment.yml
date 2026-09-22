@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: conv-app
-          image: antonlarichev/conv-app
+          image: antonlarichev/conv-app:1.2
           ports:
             # открытый наружу порт контейнера
             - containerPort: 80
