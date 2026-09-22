@@ -32,6 +32,6 @@ spec:
           resources:
             limits:
               # количсетво мегабайт
-              memory: "128Mi"
+              memory: "512Mi"
               # 1000m - 1 процессор
-              cpu: "100m"
+              cpu: "200m"

@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
     - name: conv-app
-      image: antonlarichev/conv-app
+      image: antonlarichev/conv-app:1.2
       ports:
         # открытый наружу порт контейнера
         - containerPort: 80
@@ -17,6 +17,6 @@ spec:
       resources:
         limits:
           # количсетво мегабайт
-          memory: "128Mi"
+          memory: "512Mi"
           # 1000m - 1 процессор
-          cpu: "100m"
+          cpu: "200m"
