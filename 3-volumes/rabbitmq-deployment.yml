@@ -21,9 +21,15 @@ spec:
             - containerPort: 5672
           env:
             - name: SEED_USERNAME
-              value: demo
+              valueFrom:
+                secretKeyRef:
+                  name: conv-api-secret
+                  key: AMQP_USER
             - name: SEED_USER_PASSWORD
-              value: demo
+              valueFrom:
+                secretKeyRef:
+                  name: conv-api-secret
+                  key: AMQP_PASSWORD
           resources:
             limits:
               memory: "512Mi"
