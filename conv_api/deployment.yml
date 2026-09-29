@@ -20,6 +20,11 @@ spec:
         ports:
           - containerPort: 3000
         env:
+          - name: AMQP_EXCHANGE
+            valueFrom:
+              secretKeyRef:
+                name: conv-api-secret
+                key: AMQP_EXCHANGE
           - name: AMQP_USER
             valueFrom:
               secretKeyRef:
@@ -30,6 +35,16 @@ spec:
               secretKeyRef:
                 name: conv-api-secret
                 key: AMQP_PASSWORD
+          - name: AMQP_HOSTNAME
+            valueFrom:
+              secretKeyRef:
+                name: conv-api-secret
+                key: AMQP_HOSTNAME
+          - name: AMQP_QUEUE
+            valueFrom:
+              secretKeyRef:
+                name: conv-api-secret
+                key: AMQP_QUEUE
         resources:
           limits:
             memory: "250Mi"
