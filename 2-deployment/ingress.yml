@@ -10,6 +10,17 @@ spec:
   - host: conv.test
     http:
       paths:
+        # Тип пути
+      - pathType: Prefix
+        # URL-путь 
+        path: "/api"
+        backend:
+          service:
+            # matadata.name необходимого сервиса
+            name: conv-api-clusterip
+            port:
+              # Целевой порт сервиса
+              number: 3000
       - pathType: Prefix
         path: "/"
         backend:
