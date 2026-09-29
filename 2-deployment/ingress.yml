@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: myingress
   annotations:
+    # Указывает NGINX Ingress Controller автоматически добавлять HTML-тег <base href="..."> в секцию <head> возвращаемого веб-приложением ответа.
+    # Так все относительные пути внутри страницы будут корректно пересчитаны относительно этого нового базового URL.
     nginx.ingress.kubernetes.io/add-base-url: "true"
 spec:
   ingressClassName: nginx
@@ -20,6 +22,13 @@ spec:
             name: conv-api-clusterip
             port:
               # Целевой порт сервиса
+              number: 3000
+      - pathType: Prefix
+        path: "/uploads"
+        backend:
+          service:
+            name: conv-api-clusterip
+            port:
               number: 3000
       - pathType: Prefix
         path: "/"
