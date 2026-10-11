@@ -14,27 +14,27 @@ spec:
         app: rabbitmq
     spec:
       containers:
-      - name: rabbitmq
-        # указываем версию явно, чтобы избежать проблем совместимости в будущем
-        image: rabbitmq:3.12.7-alpine
-        ports:
-          - containerPort: 5672
-        env:
-          - name: SEED_USERNAME
-            value: demo
-          - name: SEED_USER_PASSWORD
-            value: demo
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "200m"
-        volumeMounts:
+        - name: rabbitmq
+          # указываем версию явно, чтобы избежать проблем совместимости в будущем
+          image: rabbitmq:3.12.7-management-alpine
+          ports:
+            - containerPort: 5672
+          env:
+            - name: SEED_USERNAME
+              value: demo
+            - name: SEED_USER_PASSWORD
+              value: demo
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+          volumeMounts:
             # название существующего тома для связывания
-          - name: rabbitmq-data
-            # путь монтирования тома в контейнере
-            mountPath: /var/lib/rabbitmq
-            # путь монтирования в томе (по умолчанию /)
-            subPath: rabbitmq
+            - name: rabbitmq-data
+              # путь монтирования тома в контейнере
+              mountPath: /var/lib/rabbitmq
+              # путь монтирования в томе (по умолчанию /)
+              subPath: rabbitmq
       volumes:
         # название тома, уникально для Pod
         - name: rabbitmq-data
