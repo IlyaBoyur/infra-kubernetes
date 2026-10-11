@@ -7,6 +7,9 @@ spec:
   selector:
     app: rabbitmq
   ports:
-  - port: 5672
-    protocol: TCP
-
+    - port: 5672
+      protocol: TCP
+      name: "api"
+    - port: 15672
+      protocol: TCP
+      name: "ui"
