@@ -28,6 +28,12 @@ spec:
           ports:
             # открытый наружу порт контейнера
             - containerPort: 80
+          env:
+            - name: VITE_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: conv-app-config
+                  key: VITE_DOMAIN
           # ограничения Pod по ресурсам
           resources:
             limits:
